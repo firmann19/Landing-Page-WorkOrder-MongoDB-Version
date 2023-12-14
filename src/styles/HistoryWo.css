@@ -1,0 +1,79 @@
+.workOrder {
+    background-color: #D9D9D9;
+}
+
+.workOrder main.main-wrapper{
+    margin-left: 40px;
+    height: 100%;
+    margin-right: 40px;
+    position: relative;
+    padding: 50px 50px 50px 0px;
+}
+
+.workOrder main .main-content{
+    max-width: 1047px;
+}
+
+.workOrder .btn{
+    display: inline-block;
+    width: 112px;
+    padding: 0.563rem;
+}
+
+.workOrder .btn-status{
+    color: #0C145A;
+    background-color: #E7EAF5;
+}
+
+.workOrder .btn-status.btn-active{
+    color: #FFFFFF;
+    background-color: #0C145A;
+}
+
+.workOrder .latest-workOrder .main-content-table{
+    background-color: #FFFFFF;
+    padding: 1.25rem 1.875rem;
+    border-radius: 1rem;
+    max-width: 1047px;
+}
+
+.workOrder .latest-workOrder .workOrder-title-header{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.workOrder .latest-workOrder .workOrder-title{
+    white-space: nowrap; 
+    width: 135px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.workOrder .latest-workOrder .icon-status{
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    margin: 9px 6px 0px 0px;
+}
+
+.workOrder .latest-workOrder .icon-status.pending{
+    background-color: #FEBD57;
+}
+
+.workOrder .latest-workOrder .icon-status.success{
+    background-color: #1ABC9C;
+}
+
+.workOrder .latest-workOrder .icon-status.failed{
+    background-color: #FE5761;
+}
+
+.workOrder .latest-workOrder table thead tr th{
+    font-weight: 400;
+}
+
+@media (max-width:992px){
+    .workOrder main.main-wrapper{
+        width: 100%;
+    }
+}

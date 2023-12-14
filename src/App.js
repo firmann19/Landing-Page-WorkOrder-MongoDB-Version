@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import CreateWO from "./pages/CreateWO";
+import HistoryWoDetail from "./pages/HistoryWoDetail";
+import CompleteWO from "./pages/CompleteWO";
+import Approval from "./pages/Approval";
+import HistoryWO from "./pages/HistoryWO";
+import { listen } from "./redux/listener";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    listen();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/dashboard" element={<HomePage />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/create-wo" element={<CreateWO />} />
+        <Route path="/complete-createWO" element={<CompleteWO />} />
+        <Route
+          path="/history-wo/history-wo-detail/:id"
+          element={<HistoryWoDetail />}
+        />
+        <Route path="/approval" element={<Approval />} />
+        <Route path="/history-wo" element={<HistoryWO />} />
+      </Routes>
+    </>
   );
 }
 

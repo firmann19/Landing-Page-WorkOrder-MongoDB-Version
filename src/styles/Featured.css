@@ -1,0 +1,23 @@
+.item {
+    width: 360px;
+    height: 173px;
+    background-color: #F9FAFF;
+    border-radius: 26px;
+    margin-top: 34px;
+}
+
+.title-item {
+    color: #0C145A;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.desc-item {
+    color: #0C145A;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
