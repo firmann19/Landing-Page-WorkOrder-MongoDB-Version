@@ -43,7 +43,7 @@ function HistoryWoDetail() {
       Tindakan: res.data.data.Tindakan,
       GantiSparepart: res.data.data.GantiSparepart,
       HeadIT: res.data.data.HeadIT.nama,
-      StafIT: res.data.data.StaffIT.nama,
+      StaffIT: res.data.data.StaffIT.nama,
       Date_CompletionWO: moment(res.data.data.Date_CompletionWO).format(
         "DD-MM-YYYY, h:mm:ss a"
       ),

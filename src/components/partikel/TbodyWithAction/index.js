@@ -74,7 +74,7 @@ function TbodyWithAction({
                       }}
                       disabled={
                         data.StatusPengerjaan === "Pending" ||
-                        data.StatusWO === "OnProgress"
+                        data.StatusPengerjaan === "OnProgress"
                       }
                     >
                       Detail
