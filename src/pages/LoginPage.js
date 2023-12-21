@@ -41,7 +41,8 @@ function LoginPage() {
           res.data.data.namaDepartement,
           res.data.data.departementId,
           res.data.data.userId,
-          res.data.data.role
+          res.data.data.role,
+          res.data.data.image
         )
       );
 

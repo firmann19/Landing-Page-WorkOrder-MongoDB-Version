@@ -8,7 +8,8 @@ let initialState = localStorage.getItem("auth")
       namaDepartement: null,
       departementId: null,
       userId: null,
-      role: null
+      role: null,
+      image: null,
     };
 
 export default function reducer(state = initialState, action) {
@@ -20,7 +21,8 @@ export default function reducer(state = initialState, action) {
         namaDepartement: action.namaDepartement,
         departementId: action.departementId,
         userId: action.userId,
-        role: action.role
+        role: action.role,
+        image: action.image,
       };
 
     case USER_LOGOUT:
@@ -30,7 +32,8 @@ export default function reducer(state = initialState, action) {
         namaDepartement: null,
         departementId: null,
         userId: null,
-        role: null
+        role: null,
+        image: null,
       };
 
     default:

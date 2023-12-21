@@ -6,7 +6,8 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [user, setUser] = useState(null);
-  const [role, setRole] = useState(null)
+  const [role, setRole] = useState(null);
+  const [image, setImage] = useState(null);
 
   const handleLogout = () => {
     localStorage.clear();
@@ -15,12 +16,13 @@ function Navbar() {
 
   useEffect(() => {
     const fetchData = () => {
-      let { user, role } = localStorage.getItem("auth")
+      let { user, role, image } = localStorage.getItem("auth")
         ? JSON.parse(localStorage.getItem("auth"))
         : {};
 
       setUser(user);
-      setRole(role)
+      setRole(role);
+      setImage(image);
     };
     fetchData();
   }, []);
@@ -81,7 +83,9 @@ function Navbar() {
             <ul className="navbar-nav text-lg">
               <li className="nav-item my-auto dropdown d-flex">
                 <div className="vertical-line d-lg-block d-none"></div>
-                <p className="text-lg color-palette-1 ms-3 my-auto">{role}, {user}</p>
+                <p className="text-lg color-palette-1 ms-3 my-auto">
+                  {role}, {user}
+                </p>
                 <div>
                   <a
                     className="dropdown-toggle ms-3"
@@ -92,7 +96,7 @@ function Navbar() {
                     aria-expanded="false"
                   >
                     <img
-                      src={Logo}
+                      src={`http://localhost:5000/${image}`}
                       className="rounded-circle"
                       width="40"
                       height="40"

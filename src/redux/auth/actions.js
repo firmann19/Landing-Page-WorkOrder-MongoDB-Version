@@ -1,6 +1,14 @@
 import { USER_LOGIN, USER_LOGOUT } from "./constants";
 
-export function userLogin(token, user, namaDepartement, departementId, userId, role) {
+export function userLogin(
+  token,
+  user,
+  namaDepartement,
+  departementId,
+  userId,
+  role,
+  image
+) {
   return {
     type: USER_LOGIN,
     token,
@@ -8,7 +16,8 @@ export function userLogin(token, user, namaDepartement, departementId, userId, r
     namaDepartement,
     departementId,
     userId,
-    role
+    role,
+    image,
   };
 }
 
