@@ -38,7 +38,6 @@ function Approval() {
 
   const fetchOneWO = async () => {
     const res = await getData(`/checkout/${id}`);
-    console.log("test", res);
 
     setForm({
       ...form,

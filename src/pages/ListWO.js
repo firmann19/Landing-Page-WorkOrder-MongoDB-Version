@@ -3,7 +3,7 @@ import Table from "../components/partikel/TableActionSecond";
 import { Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchCheckouts } from "../redux/checkouts/actions";
+import { fetchListCheckouts } from "../redux/checkouts/actions";
 import Swal from "sweetalert2";
 import { deleteData } from "../utils/fetch";
 import { setNotif } from "../redux/notif/actions";
@@ -15,7 +15,7 @@ function ListWO() {
   const checkouts = useSelector((state) => state.checkouts);
 
   useEffect(() => {
-    dispatch(fetchCheckouts());
+    dispatch(fetchListCheckouts());
   }, [dispatch]);
 
   const handleDelete = (id) => {
@@ -34,7 +34,7 @@ function ListWO() {
           const res = await deleteData(`/checkout/${id}`);
           if (res?.data?.data) {
             dispatch(setNotif(true, "success", `berhasil hapus Work Order`));
-            dispatch(fetchCheckouts());
+            dispatch(fetchListCheckouts());
           }
         }
       }
