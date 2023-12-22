@@ -7,6 +7,8 @@ import { fetchCheckouts } from "../redux/checkouts/actions";
 import Swal from "sweetalert2";
 import { deleteData } from "../utils/fetch";
 import { setNotif } from "../redux/notif/actions";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function ListWO() {
   const dispatch = useDispatch();
@@ -15,7 +17,6 @@ function ListWO() {
   useEffect(() => {
     dispatch(fetchCheckouts());
   }, [dispatch]);
-
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -31,46 +32,44 @@ function ListWO() {
       if (result.isConfirmed) {
         if (result.isConfirmed) {
           const res = await deleteData(`/checkout/${id}`);
-          if(res?.data?.data){
-          dispatch(
-            setNotif(
-              true,
-              "success",
-              `berhasil hapus Work Order`
-            )
-          );
-          dispatch(fetchCheckouts());
+          if (res?.data?.data) {
+            dispatch(setNotif(true, "success", `berhasil hapus Work Order`));
+            dispatch(fetchCheckouts());
+          }
         }
-       }
       }
     });
   };
 
   return (
-    <Container className="mt-5">
-      <Table
-        thead={[
-          "Peralatan",
-          "Kode",
-          "Status",
-          "Tanngal Order",
-          "Departement",
-          "Nama",
-          "Aksi",
-        ]}
-        data={checkouts.data}
-        tbody={[
-          "userName",
-          "departUser",
-          "namaBarang",
-          "kodeBarang",
-          "StatusWO",
-          "date_requestWO",
-        ]}
-        deleteAction={(id) => handleDelete(id)}
-       editUrl={`/listwo/approval`}
-      />
-    </Container>
+    <div className="list-wo">
+      <Navbar />
+      <Container className="mt-5" style={{ height: "75vh" }}>
+        <Table
+          thead={[
+            "Nama",
+            "Departement",
+            "Peralatan",
+            "Kode",
+            "Status",
+            "Tanngal Order",
+            "Aksi",
+          ]}
+          data={checkouts.data}
+          tbody={[
+            "UserRequestName",
+            "DepartementName",
+            "NamaPeralatan",
+            "KodePeralatan",
+            "Status",
+            "DateRequestWO",
+          ]}
+          deleteAction={(id) => handleDelete(id)}
+          editUrl={`/list-wo/approval`}
+        />
+      </Container>
+      <Footer />
+    </div>
   );
 }
 

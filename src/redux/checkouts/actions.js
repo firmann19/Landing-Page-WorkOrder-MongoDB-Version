@@ -6,6 +6,7 @@ import {
   START_FETCHING_CHECKOUTS,
   SUCCESS_FETCHING_CHECKOUTS,
 } from "./constants";
+import moment from "moment";
 
 let debouncedFetchCheckouts = debounce(getData, 1000);
 
@@ -38,14 +39,16 @@ export const fetchCheckouts = () => {
       }, 3000);
 
       let res = await debouncedFetchCheckouts("/checkout");
-      console.log("test", res)
-
+    
       res.data.data.forEach((res) => {
         res.UserRequestName = res.UserRequest.nama;
         res.DepartementName = res.Departement.namaDepartement;
-        res.NamaPeralatan = res.NamaBarang;  
+        res.NamaPeralatan = res.NamaBarang;
         res.KodePeralatan = res.KodeBarang;
-        res.Status = res.StatusPengerjaan;   
+        res.Status = res.StatusPengerjaan;
+        res.DateRequestWO = moment(res.Date_RequestWO).format(
+          "DD-MM-YYYY, h:mm:ss a"
+        );
       });
 
       dispatch(

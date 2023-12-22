@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+.profile-img{
+    width : 200px;
+}
+
+.jumbotron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: #08b825;
+    text-align: center;
+    color: white;
+ }
+
+ nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+ }
+
+ nav {
+    background-color: #025306;
+    padding: 5px;
+ }
+
+ nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+ }
+
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+ }
+
+ body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+
+ main {
+    padding: 20px;
+ }
+
+ #content {
+    float: left;
+    width: 75%;
+    text-align: justify;
+ }
+
+ aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+ }
+
+ main {
+    padding: 20px;
+    overflow: auto;
+ }
+
+ * {
+    box-sizing: border-box;
+ }
+
+ 
+footer {
+    font-size: 14px;
+    padding: 5px;
+    background-color: #08b825;
+    text-align: center;
+    color: white;
+ }
+
+ article a {
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+}
+
+a:hover {
+   color: rgb(36, 236, 243);
+}
+
+body {
+   font-family:'Quicksand', sans-serif;
+}

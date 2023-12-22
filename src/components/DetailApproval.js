@@ -2,16 +2,16 @@ import React from "react";
 import { Col, Form, Row } from "react-bootstrap";
 import TextInputWithLabel from "./partikel/TextInputWithLabel";
 
-function DetailApproval({form}) {
+function DetailApproval({ form }) {
   return (
     <Form method="post" className="form-register">
       <Row className="mt-4 mb-4 text-lg fw-medium">
         <Col className="ms-2">
           <TextInputWithLabel
             label={"User"}
-            name="UserRequestId"
+            name="UserRequest"
             isClearable={true}
-            value={form?.UserRequestId}
+            value={form?.UserRequest}
           />
         </Col>
 
@@ -20,7 +20,7 @@ function DetailApproval({form}) {
             label={"Nama Peralatan"}
             name="NamaBarang"
             isClearable={true}
-            value={form?.namaBarang}
+            value={form?.NamaBarang}
           />
         </Col>
       </Row>
@@ -29,47 +29,47 @@ function DetailApproval({form}) {
         <Col className="ms-2">
           <TextInputWithLabel
             label={"Departement"}
-            name="DepartUserId"
+            name="Departement"
             isClearable={true}
-            value={form?.DepartUserId}
+            value={form?.Departement}
           />
         </Col>
 
         <Col className="me-3">
           <TextInputWithLabel
             label={"Kode Peralatan"}
-            name="kodeBarang"
+            name="KodeBarang"
             isClearable={true}
-            value={form?.kodeBarang}
+            value={form?.KodeBarang}
           />
         </Col>
       </Row>
 
       <Form.Label className="text-lg fw-medium">Permasalahan</Form.Label>
-      <Form.Control 
-         id="permasalahan"
-         as="textarea"
-         name="permasalahan"
-         rows={2}
-         value={form?.permasalahan}
+      <Form.Control
+        id="Permasalahan"
+        as="textarea"
+        name="Permasalahan"
+        rows={2}
+        value={form?.Permasalahan}
       />
 
       <Row className="mt-4 mb-4 text-lg fw-medium">
         <Col className="ms-2">
           <TextInputWithLabel
             label={"Nama Atasan"}
-            name="UserApproveId"
+            name="UserApprove"
             isClearable={true}
-            value={form?.UserApproveId}
+            value={form?.UserApprove}
           />
         </Col>
 
         <Col className="me-3">
           <TextInputWithLabel
             label={"Tanggal Work Order"}
-            name="date_requestWO"
+            name="Date_RequestWO"
             isClearable={true}
-            value={form?.date_requestWO}
+            value={form?.Date_RequestWO}
           />
         </Col>
       </Row>

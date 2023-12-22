@@ -11,6 +11,7 @@ import "./styles/Complete-Checkout.css";
 import "./styles/HistoryWo.css";
 import "./styles/Approval.css";
 import "./styles/CreateWO.css";
+import "./styles/Blog.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { BrowserRouter } from "react-router-dom";

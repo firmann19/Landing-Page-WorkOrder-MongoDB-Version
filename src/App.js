@@ -8,6 +8,8 @@ import Approval from "./pages/Approval";
 import HistoryWO from "./pages/HistoryWO";
 import { listen } from "./redux/listener";
 import { useEffect } from "react";
+import ListWO from "./pages/ListWO";
+import Blog from "./pages/Blog";
 
 function App() {
   useEffect(() => {
@@ -25,8 +27,10 @@ function App() {
           path="/history-wo/history-wo-detail/:id"
           element={<HistoryWoDetail />}
         />
-        <Route path="/approval" element={<Approval />} />
+        <Route path="/list-wo/approval/:id" element={<Approval />} />
         <Route path="/history-wo" element={<HistoryWO />} />
+        <Route path="/list-wo" element={<ListWO />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </>
   );

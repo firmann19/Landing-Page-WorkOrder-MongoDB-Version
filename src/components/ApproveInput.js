@@ -5,10 +5,7 @@ import SButton from "./partikel/Button";
 function ApproveInput({ form, handleChange, handleSubmit, isLoading }) {
   return (
     <>
-      <Card
-        className="bg-light"
-        style={{ width: "30rem", height: "20rem" }}
-      >
+      <Card className="bg-light" style={{ width: "30rem", height: "20rem" }}>
         <Card.Body>
           <h1 className="text-4xl text-center fw-bold color-palette-1 mb-10">
             Approval

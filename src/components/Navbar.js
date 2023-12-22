@@ -63,7 +63,7 @@ function Navbar() {
                 className="nav-item nav-link my-auto"
                 activeClassName="active"
               >
-                History Order
+                History
               </NavLink>
               <NavLink
                 to="/blog"
@@ -119,7 +119,7 @@ function Navbar() {
                     <li>
                       <a
                         className="dropdown-item text-lg color-palette-2"
-                        href="#"
+                        href="/list-wo"
                       >
                         List Approve
                       </a>
