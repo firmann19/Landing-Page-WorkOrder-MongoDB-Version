@@ -89,3 +89,7 @@ a:hover {
 body {
    font-family:'Quicksand', sans-serif;
 }
+
+.info {
+ text-align: justify;
+}

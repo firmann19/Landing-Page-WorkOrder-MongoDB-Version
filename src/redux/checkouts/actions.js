@@ -42,8 +42,8 @@ export const fetchCheckouts = () => {
         dispatch(clearNotif());
       }, 3000);
 
-      let res = await debouncedFetchCheckouts("/checkout");
-    
+      let res = await debouncedFetchCheckouts("/checkoutbyiduser");
+
       res.data.data.forEach((res) => {
         res.UserRequestName = res.UserRequest.nama;
         res.DepartementName = res.Departement.namaDepartement;
@@ -95,7 +95,7 @@ export const fetchListCheckouts = () => {
       }, 3000);
 
       let res = await debouncedFetchListCheckouts("/checkout");
-    
+
       res.data.data.forEach((res) => {
         res.UserRequestName = res.UserRequest.nama;
         res.DepartementName = res.Departement.namaDepartement;

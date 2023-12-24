@@ -1,9 +1,13 @@
 import React from "react";
 import LogoARS from "../assets/images/logo_ars-removebg-preview.png";
 import { Table } from "react-bootstrap";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Blog() {
   return (
+    <>
+    <Navbar />
     <div>
       <header>
         <div class="jumbotron">
@@ -43,7 +47,7 @@ function Blog() {
             </p>
           </article>
 
-          <article id="visidanmisi" class="card">
+          <article id="tujuan" class="card">
             <h2 className="text-3xl fw-bold">Tujuan</h2>
             <p className="text-lg m-0">
               Tujuan dibuatnya work order adalah agar bisa membantu penjadwalan
@@ -54,7 +58,7 @@ function Blog() {
             </p>
           </article>
 
-          <article id="organisasimahasiswa" class="card">
+          <article id="elemenworkorder" class="card">
             <h2 className="text-3xl fw-bold">Elemen Work Order</h2>
             <p className="text-lg m-0">
               Di dalam industri perusahaan manufaktur, work order dibuat oleh
@@ -147,7 +151,7 @@ function Blog() {
 
             <section>
               <Table bordered striped hover>
-                <p className="text-lg m-0 text-align-justify">
+                <p className="info text-lg m-0">
                   PT. ARAI RUBBER SEAL INDONESIA adalah sebuah perusahaan yang
                   bergerak di bidang manufaktur karet sintetis dan memproduksi
                   komponen otomotif seperti Oil Seal dan Valve Steam Seal,
@@ -161,6 +165,8 @@ function Blog() {
         </aside>
       </main>
     </div>
+    <Footer />
+    </>
   );
 }
 
