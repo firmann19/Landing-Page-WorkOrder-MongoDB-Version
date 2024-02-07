@@ -17,7 +17,7 @@ const rootReducers = combineReducers({
   auth: authReducer,
   lists: listsReducer,
   notif: notifReducer,
-  checkouts: checkoutReducer
+  checkouts: checkoutReducer,
 });
 const store = createStore(
   rootReducers,

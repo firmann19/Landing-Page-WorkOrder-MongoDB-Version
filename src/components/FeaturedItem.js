@@ -33,7 +33,7 @@ function Featured() {
               <img
                 src={History}
                 className="ms-3 my-3"
-                alt="history"
+                alt="blog"
                 width="50"
                 height="50"
               />
@@ -52,7 +52,7 @@ function Featured() {
               <img
                 src={Blog}
                 className="ms-3 my-3"
-                alt="WorkOrder"
+                alt="blog"
                 width="50"
                 height="50"
               />
@@ -65,12 +65,12 @@ function Featured() {
         </div>
 
         <div className="col">
-          <Link to="/support" className="text-decoration-none">
+          <Link to="/contact-us" className="text-decoration-none">
             <div className="item">
               <img
                 src={Support}
                 className="ms-3 my-3"
-                alt="WorkOrder"
+                alt="support"
                 width="50"
                 height="50"
               />

@@ -9,6 +9,7 @@ function SButton({
   loading,
   disabled,
   className,
+  style
 }) {
   return (
     <Button
@@ -17,6 +18,7 @@ function SButton({
       variant={variant}
       disabled={disabled}
       size={size}
+      style={style}
     >
       {loading ? "Loading..." : children}
     </Button>

@@ -10,6 +10,7 @@ import { listen } from "./redux/listener";
 import { useEffect } from "react";
 import ListWO from "./pages/ListWO";
 import Blog from "./pages/Blog";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/history-wo" element={<HistoryWO />} />
         <Route path="/list-wo" element={<ListWO />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </>
   );

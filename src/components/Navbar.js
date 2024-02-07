@@ -73,7 +73,7 @@ function Navbar() {
                 Blog
               </NavLink>
               <NavLink
-                to="/support"
+                to="/contact-us"
                 className="nav-item nav-link my-auto"
                 activeClassName="active"
               >
