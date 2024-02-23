@@ -150,7 +150,6 @@ function Blog() {
             </header>
 
             <section>
-              <Table bordered striped hover>
                 <p className="info text-lg m-0">
                   PT. ARAI RUBBER SEAL INDONESIA adalah sebuah perusahaan yang
                   bergerak di bidang manufaktur karet sintetis dan memproduksi
@@ -159,7 +158,6 @@ function Blog() {
                   Industri Manis, Jl. Manis II No. 2, Kabupaten Tangerang,
                   Banten, 15810 Indonesia.
                 </p>
-              </Table>
             </section>
           </article>
         </aside>
