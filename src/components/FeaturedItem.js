@@ -111,7 +111,7 @@ function Featured() {
               />
               <h4 className="title-item ms-3">Create Work Order</h4>
               <p className="desc-item ms-3 text-lg color-palette-1 m-0">
-                Membuat pesanan kerja baru dan mengirimkannya pada departemen IT
+                Membuat pesanan kerja baru dan mengirimkannya pada departemen IT.
               </p>
             </div>
           </Link>
@@ -148,7 +148,7 @@ function Featured() {
               />
               <h4 className="title-item ms-3">Blog</h4>
               <p className="desc-item ms-3 text-lg color-palette-1 m-0">
-                Informasi tentang Sistem Work Order untuk menyelesaikan masalah
+                Informasi tentang Sistem Work Order untuk menyelesaikan masalah.
               </p>
             </div>
           </Link>
@@ -166,7 +166,7 @@ function Featured() {
               />
               <h4 className="title-item ms-3">Support</h4>
               <p className="desc-item ms-3 text-lg color-palette-1 m-0">
-                Membantu Anda menyelesaikan masalah Anda dengan cepat dan mudah
+                Membantu Anda menyelesaikan masalah dengan cepat dan mudah.
               </p>
             </div>
           </Link>

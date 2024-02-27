@@ -13,6 +13,7 @@ import "./styles/Approval.css";
 import "./styles/CreateWO.css";
 import "./styles/Blog.css";
 import "./styles/ContactUs.css"
+import "./styles/HistoyWODetail.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { BrowserRouter } from "react-router-dom";

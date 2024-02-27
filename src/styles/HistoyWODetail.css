@@ -1,6 +1,6 @@
 .workOrder {
     background-color: #D9D9D9;
-    padding: 2rem; /* Tambahkan padding agar konten tidak terlalu dekat dengan tepi layar */
+    padding: 1rem; /* Tambahkan padding agar konten tidak terlalu dekat dengan tepi layar */
 }
 
 .title {
@@ -9,7 +9,7 @@
     font-size: 2rem; /* Mengubah ukuran font agar sesuai dengan layar yang lebih kecil */
 }
 
-.form-create-wo {
+.form-history-wo-detail {
     min-width: 20rem; /* Mengubah min-width agar lebih responsif */
     
     .label {
@@ -54,28 +54,8 @@
     }
 }
 
-.btn-createWO {
-    font-family: 'Quicksand', sans-serif;
-      font-weight: bold;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    padding: 0 3rem;
-    border: 0;
-    border-radius: 3rem;
-    background-image:#4D17E2;
-    background-size: 300% 100%;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .btn-createWO:hover:enabled {
-    box-shadow: 0 0.5em 0.5em -0.4em #4f74f9ba;
-    background-size: 100% 100%;
-    transform: translateY(-0.15em);
-  }
-  
-
 @media (max-width: 992px){
-    .form-create-wo {
+    .form-history-wo-detail {
         min-width: 100%; /* Mengatur lebar agar mengisi seluruh lebar layar pada perangkat seluler */
     }
 }
@@ -90,26 +70,18 @@
 }
 
 @media (min-width: 768px) { /* Misalnya, di sini saya menggunakan ukuran 768px sebagai breakpoint untuk menandai bahwa ini bukan tampilan mobile */
-    .alert {
+    .save {
       width: 100%;
-      max-width: 72%;
+      max-width: 50%;
       margin: auto;
       /* Tambahan gaya CSS lainnya sesuai kebutuhan */
     }
 }
 
 @media (min-width: 768px) { /* Misalnya, di sini saya menggunakan ukuran 768px sebagai breakpoint untuk menandai bahwa ini bukan tampilan mobile */
-    .selectBox {
+    .alert {
       width: 100%;
-      max-width: 30%;
-      /* Tambahan gaya CSS lainnya sesuai kebutuhan */
-    }
-}
-
-@media (min-width: 768px) { /* Misalnya, di sini saya menggunakan ukuran 768px sebagai breakpoint untuk menandai bahwa ini bukan tampilan mobile */
-    .btn-createWO {
-      width: 100%;
-      max-width: 50%;
+      max-width: 72%;
       margin: auto;
       /* Tambahan gaya CSS lainnya sesuai kebutuhan */
     }

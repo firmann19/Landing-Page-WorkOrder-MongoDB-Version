@@ -83,7 +83,7 @@ function Navbar() {
             <ul className="navbar-nav text-lg">
             <div className="vertical-line d-lg-block d-none"></div>
               <li className="nav-item my-auto dropdown d-flex">
-                <p className="text-lg color-palette-1 ms-3 my-auto">
+                <p className="text-lg nav-item text-black color-palette-1 ms-3 my-auto">
                   {role}, {user}
                 </p>
                 <div>

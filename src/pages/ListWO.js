@@ -44,7 +44,7 @@ function ListWO() {
   return (
     <div className="list-wo">
       <Navbar />
-      <Container className="mt-5" style={{ height: "75vh" }}>
+      <Container className="mt-5" style={{ height: "75vh", overflowX: "auto" }}>
         <Table
           thead={[
             "Nama",
