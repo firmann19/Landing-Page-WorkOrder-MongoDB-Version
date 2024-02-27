@@ -8,10 +8,8 @@ function HomePage() {
   return (
     <>
       <Navbar />
-      <div className="mx-md-auto">
         <Header />
         <Featured />
-      </div>
       <Footer />
     </>
   );

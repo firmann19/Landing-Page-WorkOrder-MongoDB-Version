@@ -89,35 +89,39 @@ function CreateWO() {
 
   return (
     <>
+      <Navbar />
       <div
         className="workOrder overflow-auto h-screen"
-        style={{ height: "100vh" }}
+        style={{
+          minHeight: "100vh",
+          paddingTop: "60px",
+          paddingBottom: "30px",
+        }}
       >
-        <Navbar />
-        <div className="pt-lg-100 pb-5 mb-3 responsive-form-checkout workOrder mx-auto">
-          <div className="m-auto" style={{ width: "50%" }}>
-            {alert.status && (
-              <SAlert type={alert.type} message={alert.message} />
-            )}
-          </div>
-          <Card style={{ width: "50%" }} className="m-auto">
-            <h1 className="fw-bold text-4xl color-palette-1 text-center mt-3">
-              Work Order
-            </h1>
-
-            <CreateWoInput
-              user={user}
-              namaDepartement={namaDepartement}
-              form={form}
-              isLoading={isLoading}
-              lists={lists}
-              handleChange={handleChange}
-              handleSubmit={handleSubmit}
-            />
-          </Card>
+        <div className="m-auto alert">
+          {alert.status && <SAlert type={alert.type} message={alert.message} />}
         </div>
-        <Footer />
+        <Card
+          className="m-auto"
+          style={{
+            boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)", // Bayangan pada setiap sisi
+            borderRadius: "10px", // Sudut bulatan pada kartu
+          }}
+        >
+          <h1 className="title text-center mt-3">Work Order</h1>
+
+          <CreateWoInput
+            user={user}
+            namaDepartement={namaDepartement}
+            form={form}
+            isLoading={isLoading}
+            lists={lists}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+          />
+        </Card>
       </div>
+      <Footer />
     </>
   );
 }

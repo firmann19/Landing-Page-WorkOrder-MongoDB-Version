@@ -81,8 +81,8 @@ function Navbar() {
               </NavLink>
             </ul>
             <ul className="navbar-nav text-lg">
+            <div className="vertical-line d-lg-block d-none"></div>
               <li className="nav-item my-auto dropdown d-flex">
-                <div className="vertical-line d-lg-block d-none"></div>
                 <p className="text-lg color-palette-1 ms-3 my-auto">
                   {role}, {user}
                 </p>

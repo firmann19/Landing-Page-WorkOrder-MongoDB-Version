@@ -1,4 +1,4 @@
-svg {
+.svg-contactUs {
 	height: 23rem;
 	margin-right: 4rem;
 }
@@ -41,10 +41,10 @@ svg {
 }
 
 .container {
-	height: 100vh;
+	height: 80vh;
 }
 
-form {
+.form-contactUs {
 	min-width: 25rem;
 	
 	.title {
@@ -100,7 +100,7 @@ form {
   }
 }
 
-.btn.btn-primary {
+.btn-contact.btn-primary {
   font-family: 'Quicksand', sans-serif;
 	font-weight: bold;
   height: 2.5rem;
@@ -113,7 +113,7 @@ form {
   transition: all 0.3s ease-in-out;
 }
 
-.btn.btn-primary:hover:enabled {
+.btn-contact.btn-primary:hover:enabled {
   box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
   background-size: 100% 100%;
   transform: translateY(-0.15em);

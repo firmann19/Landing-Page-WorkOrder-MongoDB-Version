@@ -15,8 +15,8 @@ function CreateWoInput({
   return (
     <Form method="post" className="form-create-wo">
       <Row className="mt-4 mb-4">
-        <Col className="ms-3">
-          <Form.Label className="text-lg fw-medium">User</Form.Label>
+        <Col className="">
+          <Form.Label className="label">User</Form.Label>
           <Form.Control
             name="nama"
             value={user}
@@ -27,8 +27,8 @@ function CreateWoInput({
           />
         </Col>
 
-        <Col className="me-3">
-          <Form.Label className="text-lg fw-medium">Nama Peralatan</Form.Label>
+        <Col className="">
+          <Form.Label className="label">Nama Peralatan</Form.Label>
           <Form.Control
             name="NamaBarang"
             value={form?.NamaBarang}
@@ -39,8 +39,8 @@ function CreateWoInput({
       </Row>
 
       <Row className="mt-4 mb-4">
-        <Col className="ms-3">
-          <Form.Label className="text-lg fw-medium">Departemen</Form.Label>
+        <Col className="">
+          <Form.Label className="label">Departemen</Form.Label>
           <Form.Control
             name="namaDepartement"
             value={namaDepartement}
@@ -51,8 +51,8 @@ function CreateWoInput({
           />
         </Col>
 
-        <Col className="me-3">
-          <Form.Label className="text-lg fw-medium">Kode Peralatan</Form.Label>
+        <Col className="">
+          <Form.Label className="label">Kode Peralatan</Form.Label>
           <Form.Control
             name="KodeBarang"
             value={form?.KodeBarang}
@@ -62,8 +62,8 @@ function CreateWoInput({
         </Col>
       </Row>
 
-      <Form.Group className="mb-3 ms-3 me-3">
-        <Form.Label className="text-lg fw-medium">Permasalahan</Form.Label>
+      <Form.Group className="mb-3  ">
+        <Form.Label className="label">Permasalahan</Form.Label>
         <Form.Control
           id="permasalahan"
           as="textarea"
@@ -74,8 +74,8 @@ function CreateWoInput({
         />
       </Form.Group>
 
-      <div className="mt-4 ms-3" style={{ width: "30%" }}>
-        <div className="relative text-lg fw-medium">
+      <div className="mt-4 selectBox">
+        <div className="relative label">
           <SelectBox
             label={"Disetujui"}
             placeholder={"Pilih nama atasan"}
@@ -88,13 +88,13 @@ function CreateWoInput({
         </div>
       </div>
 
-      <div className="text-center text-lg fw-medium mb-3 mt-3">
+      <div className="text-center text-lg fw-medium mb-3 mt-4">
         <SButton
-          className="btn-createWO"
+          className="btn-createWO rounded-5"
           loading={isLoading}
           disabled={isLoading}
           action={handleSubmit}
-          variant="danger"
+          style={{ width: "100%" }} // Menentukan lebar tombol menjadi 100%
         >
           Submit
         </SButton>
