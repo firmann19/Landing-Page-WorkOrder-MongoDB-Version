@@ -1,12 +1,10 @@
 import React from "react";
-import { Card, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import SButton from "./partikel/Button";
 
 function ApproveInput({ form, handleChange, handleSubmit, isLoading }) {
   return (
     <>
-      <Card className="bg-light" style={{ width: "30rem", height: "20rem" }}>
-        <Card.Body>
           <h1 className="text-4xl text-center fw-bold color-palette-1 mb-10">
             Approval
           </h1>
@@ -15,7 +13,7 @@ function ApproveInput({ form, handleChange, handleSubmit, isLoading }) {
           </p>
           <Form.Control
             name="otp"
-            className="approval-input"
+            className="approval-input mb-4"
             type="text"
             value={form?.otp}
             onChange={handleChange}
@@ -28,8 +26,6 @@ function ApproveInput({ form, handleChange, handleSubmit, isLoading }) {
           >
             Approval
           </SButton>
-        </Card.Body>
-      </Card>
     </>
   );
 }

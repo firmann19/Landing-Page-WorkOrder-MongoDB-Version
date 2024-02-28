@@ -5,8 +5,8 @@ import TextInputWithLabel from "./partikel/TextInputWithLabel";
 function DetailApproval({ form }) {
   return (
     <Form method="post" className="form-register">
-      <Row className="mt-4 mb-4 text-lg fw-medium">
-        <Col className="ms-2">
+      <Row className="mt-2 d-flex flex-wrap">
+        <Col xs={12} md={6} className="mb-3 flex-column">
           <TextInputWithLabel
             label={"User"}
             name="UserRequest"
@@ -15,7 +15,7 @@ function DetailApproval({ form }) {
           />
         </Col>
 
-        <Col className="me-3">
+        <Col xs={12} md={6} className="mb-3 flex-column">
           <TextInputWithLabel
             label={"Nama Peralatan"}
             name="NamaBarang"
@@ -25,8 +25,8 @@ function DetailApproval({ form }) {
         </Col>
       </Row>
 
-      <Row className="mt-4 mb-4 text-lg fw-medium">
-        <Col className="ms-2">
+      <Row className="mt-2 d-flex flex-wrap">
+        <Col xs={12} md={6} className="mb-3 flex-column">
           <TextInputWithLabel
             label={"Departement"}
             name="Departement"
@@ -35,7 +35,7 @@ function DetailApproval({ form }) {
           />
         </Col>
 
-        <Col className="me-3">
+        <Col xs={12} md={6} className="mb-3 flex-column">
           <TextInputWithLabel
             label={"Kode Peralatan"}
             name="KodeBarang"
@@ -54,8 +54,8 @@ function DetailApproval({ form }) {
         value={form?.Permasalahan}
       />
 
-      <Row className="mt-4 mb-4 text-lg fw-medium">
-        <Col className="ms-2">
+      <Row className="mt-3 d-flex flex-wrap">
+        <Col xs={12} md={6} className="mb-3 flex-column">
           <TextInputWithLabel
             label={"Nama Atasan"}
             name="UserApprove"
@@ -64,7 +64,7 @@ function DetailApproval({ form }) {
           />
         </Col>
 
-        <Col className="me-3">
+        <Col xs={12} md={6} className="mb-3 flex-column">
           <TextInputWithLabel
             label={"Tanggal Work Order"}
             name="Date_RequestWO"
@@ -74,8 +74,8 @@ function DetailApproval({ form }) {
         </Col>
       </Row>
 
-      <Row className="mt-4 mb-4 w-1/2 mx-auto text-lg fw-medium">
-        <Col className="me-3">
+      <Row className="mb-4 text-lg fw-medium">
+        <Col xs={12} md={6}>
           <TextInputWithLabel
             label={"Status"}
             name="StatusWO"
