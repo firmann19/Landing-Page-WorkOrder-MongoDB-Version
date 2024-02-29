@@ -88,7 +88,7 @@ function CreateWoInput({
         </div>
       </div>
 
-      <div className="text-center text-lg fw-medium mb-3 mt-4">
+      <div className="text-center mb-3 mt-4">
         <SButton
           className="btn-createWO rounded-5"
           loading={isLoading}

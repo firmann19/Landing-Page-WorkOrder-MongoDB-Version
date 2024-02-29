@@ -73,8 +73,8 @@ function LoginPage() {
                 <img src={Logo} width="80" height="80" />
               </a>
             </div>
-            <h2 className="text-4xl fw-bold color-palette-1 mb-10">Sign In</h2>
-            <p className="text-lg color-palette-1 m-0">
+            <h2 className="title fw-bold  color-palette-1 mb-10">Sign In</h2>
+            <p className="label color-palette-1 m-0">
               Masuk untuk melakukan proses Work Order
             </p>
             <LoginInput

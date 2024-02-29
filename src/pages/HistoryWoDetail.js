@@ -94,6 +94,7 @@ function HistoryWoDetail() {
             </div>
           </div>
 
+          
           <Card
             id="pdf-content"
             style={{
@@ -104,10 +105,12 @@ function HistoryWoDetail() {
           >
             <Card.Body style={{ backgroundColor: "white", borderColor: "white"}}>
               <h1 className="title text-center mb-10">Work Order</h1>
+              <div className="border-top border-gray-200 pt-4 mt-4">
               <HistoryWOInput form={form} />
+              </div>
             </Card.Body>
           </Card>
-        </div>
+          </div>
       </div>
       <Footer />
     </>

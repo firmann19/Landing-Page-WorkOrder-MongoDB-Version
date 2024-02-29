@@ -35,7 +35,7 @@ export default function SFORM({ form, handleChange, handleSubmit, isLoading }) {
           loading={isLoading}
           disabled={isLoading}
           variant="primary"
-          className="btn btn-sign-in fw-medium text-lg text-white rounded-5 p-2"
+          className="btn btn-sign-in text-white rounded-5 p-2"
           action={handleSubmit}
         >
           Continue to Sign In

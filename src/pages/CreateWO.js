@@ -109,7 +109,7 @@ function CreateWO() {
           }}
         >
           <h1 className="title text-center mt-3">Work Order</h1>
-
+          <div className="border-top border-gray-200 pt-4 mt-4">
           <CreateWoInput
             user={user}
             namaDepartement={namaDepartement}
@@ -119,6 +119,7 @@ function CreateWO() {
             handleChange={handleChange}
             handleSubmit={handleSubmit}
           />
+          </div>
         </Card>
       </div>
       <Footer />

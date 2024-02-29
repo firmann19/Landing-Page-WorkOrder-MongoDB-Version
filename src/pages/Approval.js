@@ -84,30 +84,6 @@ function Approval() {
     // Tidak ada dependensi yang diubah, sehingga array dependensi kosong
   }, []); // Menambahkan array dependensi kosong karena ini akan dijalankan sekali saat komponen dimount
 
-  // const fetchOneWO = async () => {
-  //   const res = await getData(`/checkout/${id}`);
-  //   const {
-  //     UserRequest,
-  //     Departement,
-  //     NamaBarang,
-  //     KodeBarang,
-  //     Permasalahan,
-  //     UserApprove,
-  //     Date_RequestWO,
-  //     StatusWO,
-  //   } = res.data.data;
-  //   setForm({
-  //     UserRequest: UserRequest.nama,
-  //     Departement: Departement.namaDepartement,
-  //     NamaBarang,
-  //     KodeBarang,
-  //     Permasalahan,
-  //     UserApprove: UserApprove.nama,
-  //     Date_RequestWO: moment(Date_RequestWO).format("DD-MM-YYYY, h:mm:ss a"),
-  //     StatusWO,
-  //   });
-  // };
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -147,7 +123,7 @@ function Approval() {
             borderRadius: "10px 10px 0 0", // Sudut bulatan pada kartu
           }}
         >
-          <h2 className="text-center">Work Order</h2>
+          <h2 className="title text-center">Work Order</h2>
           <div className="border-top border-gray-200 pt-4 mt-4">
             <DetailApproval form={form} />
           </div>

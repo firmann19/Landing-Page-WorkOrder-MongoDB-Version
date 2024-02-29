@@ -4,7 +4,7 @@ import TextInputWithLabel from "./partikel/TextInputWithLabel";
 
 function DetailApproval({ form }) {
   return (
-    <Form method="post" className="form-register">
+    <Form method="post" className="form-approval">
       <Row className="mt-2 d-flex flex-wrap">
         <Col xs={12} md={6} className="mb-3 flex-column">
           <TextInputWithLabel
@@ -12,6 +12,8 @@ function DetailApproval({ form }) {
             name="UserRequest"
             isClearable={true}
             value={form?.UserRequest}
+            readOnly
+            disabled
           />
         </Col>
 
@@ -21,6 +23,8 @@ function DetailApproval({ form }) {
             name="NamaBarang"
             isClearable={true}
             value={form?.NamaBarang}
+            readOnly
+            disabled
           />
         </Col>
       </Row>
@@ -32,6 +36,8 @@ function DetailApproval({ form }) {
             name="Departement"
             isClearable={true}
             value={form?.Departement}
+            readOnly
+            disabled
           />
         </Col>
 
@@ -41,17 +47,21 @@ function DetailApproval({ form }) {
             name="KodeBarang"
             isClearable={true}
             value={form?.KodeBarang}
+            readOnly
+            disabled
           />
         </Col>
       </Row>
 
-      <Form.Label className="text-lg fw-medium">Permasalahan</Form.Label>
+      <Form.Label className="label">Permasalahan</Form.Label>
       <Form.Control
         id="Permasalahan"
         as="textarea"
         name="Permasalahan"
         rows={2}
         value={form?.Permasalahan}
+        readOnly
+        disabled
       />
 
       <Row className="mt-3 d-flex flex-wrap">
@@ -61,6 +71,8 @@ function DetailApproval({ form }) {
             name="UserApprove"
             isClearable={true}
             value={form?.UserApprove}
+            readOnly
+            disabled
           />
         </Col>
 
@@ -70,6 +82,8 @@ function DetailApproval({ form }) {
             name="Date_RequestWO"
             isClearable={true}
             value={form?.Date_RequestWO}
+            readOnly
+            disabled
           />
         </Col>
       </Row>
@@ -81,6 +95,8 @@ function DetailApproval({ form }) {
             name="StatusWO"
             isClearable={true}
             value={form?.StatusWO}
+            readOnly
+            disabled
           />
         </Col>
       </Row>

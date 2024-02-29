@@ -5,15 +5,15 @@ import SButton from "./partikel/Button";
 function ApproveInput({ form, handleChange, handleSubmit, isLoading }) {
   return (
     <>
-          <h1 className="text-4xl text-center fw-bold color-palette-1 mb-10">
+          <h1 className="title text-4xl text-center color-palette-1 mb-10">
             Approval
           </h1>
-          <p className=" mt-2 mb-4 text-center text-lg color-palette-1 m-0">
+          <p className="label-approveInput mt-2 mb-4 text-center">
             Silahkan masukan kode otp untuk <br /> persetujuan Work Order.
           </p>
           <Form.Control
             name="otp"
-            className="approval-input mb-4"
+            className="form-control mb-4"
             type="text"
             value={form?.otp}
             onChange={handleChange}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import TextInput from "../TextInput";
+import "../../../styles/Approval.css"
 
 function TextInputWithLabel({
   label,
@@ -10,10 +11,12 @@ function TextInputWithLabel({
   onChange,
   placeholder,
   className,
+  readOnly,
+  disabled
 }) {
   return (
     <Form.Group className="mb-2">
-      <Form.Label className="form-label text-lg fw-medium">{label}</Form.Label>
+      <Form.Label className="label">{label}</Form.Label>
       <TextInput
         type={type}
         name={name}
@@ -21,6 +24,8 @@ function TextInputWithLabel({
         placeholder={placeholder}
         onChange={onChange}
         className={className}
+        readOnly={readOnly}
+        disabled={disabled}
       />
     </Form.Group>
   );

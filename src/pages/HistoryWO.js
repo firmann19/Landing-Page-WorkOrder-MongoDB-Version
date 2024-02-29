@@ -185,7 +185,7 @@ function HistoryWO() {
           </div>
 
           <div className="latest-workOrder">
-            <p className="text-lg fw-medium color-palette-1 mb-4">
+            <p className="label-HistoryWO color-palette-1 mb-4">
               Latest Work Order
             </p>
             <div className="main-content main-content-table overflow-auto">

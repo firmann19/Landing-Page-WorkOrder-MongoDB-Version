@@ -97,7 +97,7 @@ import { Link } from "react-router-dom";
 
 function Featured() {
   return (
-    <div className="featured mx-auto pb-5" style={{ maxWidth: "756px" }}>
+    <div className="featured mx-auto pb-5 pt-3" style={{ maxWidth: "756px" }}>
       <div className="row gx-4 mx-auto" style={{width: "100%"}}>
         <div className="col-md-6">
           <Link to="/create-wo" className="text-decoration-none">
