@@ -61,7 +61,7 @@ function HistoryWoDetail() {
 
     html2canvas(input).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF('p', 'mm', 'a4');
+      const pdf = new jsPDF("p", "mm", "a4");
       const width = pdf.internal.pageSize.getWidth();
       const height = pdf.internal.pageSize.getHeight();
       pdf.addImage(imgData, "PNG", 10, 10, width - 20, height - 20); // Add margin on each side
@@ -94,23 +94,26 @@ function HistoryWoDetail() {
             </div>
           </div>
 
-          
           <Card
             id="pdf-content"
             style={{
               boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)", // Bayangan pada setiap sisi
-              borderRadius: "10px", // Sudut bulatan pada kartu
-              border: "0",
             }}
           >
-            <Card.Body style={{ backgroundColor: "white", borderColor: "white"}}>
+            <Card.Body
+              style={{
+                backgroundColor: "white",
+                borderColor: "white",
+                borderRadius: "10px",
+              }}
+            >
               <h1 className="title text-center mb-10">Work Order</h1>
               <div className="border-top border-gray-200 pt-4 mt-4">
-              <HistoryWOInput form={form} />
+                <HistoryWOInput form={form} />
               </div>
             </Card.Body>
           </Card>
-          </div>
+        </div>
       </div>
       <Footer />
     </>

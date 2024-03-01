@@ -57,6 +57,7 @@
 
 .form-approval {
     min-width: 20rem; /* Mengubah min-width agar lebih responsif */
+    padding: 0 1rem;
     
     .label {
         font-family: 'Quicksand', sans-serif;
