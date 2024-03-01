@@ -1,95 +1,128 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
 
+.blog {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 1.3rem;
+   margin: 0;
+   padding: 0;
+}
+
 .profile-img{
-    width : 200px;
+   width : 200px;
 }
 
 .jumbotron {
-    font-size: 20px;
-    padding: 60px;
-    background-color: #08b825;
-    text-align: center;
-    color: white;
- }
+   font-size: 20px;
+   padding: 60px;
+   background-color: #08b825;
+   text-align: center;
+   color: white;
+}
 
- nav li {
-    display: inline;
-    list-style-type: none;
-    margin-right: 20px;
- }
+nav li {
+   display: inline;
+   list-style-type: none;
+   margin-right: 20px;
+}
 
- nav {
-    background-color: #025306;
-    padding: 5px;
- }
+nav {
+   background-color: #025306;
+   padding: 5px;
+}
 
- nav a {
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-    color: white;
- }
+nav a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+}
 
- .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: 20px;
- }
+.main-blog {
+   padding: 20px;
+   overflow: auto;
+}
 
- body {
-    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    padding: 0;
- }
+.card-blog {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}
 
- main {
-    padding: 20px;
- }
+#content {
+   float: left;
+   width: 75%;
+   text-align: justify;
+}
 
- #content {
-    float: left;
-    width: 75%;
-    text-align: justify;
- }
+.title-blog {
+   font-family: 'Pacifico', cursive;
+   font-weight: 600;
+   font-size: 3rem; /* Mengubah ukuran font agar sesuai dengan layar yang lebih kecil */
+}
 
- aside {
-    float: right;
-    width: 25%;
-    padding-left: 20px;
- }
+.label-blog {
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 600;
+   font-size: 2rem; /* Mengubah ukuran font agar sesuai dengan layar yang lebih kecil */
+   position: relative;
+   left: 0;
+   color: #212529;
+}
 
- main {
-    padding: 20px;
-    overflow: auto;
- }
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+}
 
- * {
-    box-sizing: border-box;
- }
 
- 
+
+* {
+   box-sizing: border-box;
+}
+
+
 footer {
-    font-size: 14px;
-    padding: 5px;
-    background-color: #08b825;
-    text-align: center;
-    color: white;
- }
+   font-size: 14px;
+   padding: 5px;
+   background-color: #08b825;
+   text-align: center;
+   color: white;
+}
 
- article a {
-    text-decoration: none;
-    color: rgb(17, 17, 17);
+article a {
+   text-decoration: none;
+   color: rgb(17, 17, 17);
 }
 
 a:hover {
-   color: rgb(36, 236, 243);
+  color: rgb(36, 236, 243);
 }
 
-body {
-   font-family:'Quicksand', sans-serif;
-}
+@media (max-width: 768px) {
+   aside {
+     display: none;
+   }
+ }
 
-.info {
- text-align: justify;
+ @media (max-width: 768px) {
+   .main-blog {
+      padding: 10px; /* Adjust padding for smaller screens */
+   }
+
+   #content {
+      width: 100%; /* Take full width on smaller screens */
+      float: none; /* Remove floating for better stacking */
+   }
+
+   aside {
+      width: 100%; /* Take full width on smaller screens */
+      float: none; /* Remove floating for better stacking */
+      padding-left: 0; /* Reset padding */
+   }
+
+   .card-blog {
+      margin-top: 10px; /* Adjust margin for smaller screens */
+   }
 }
