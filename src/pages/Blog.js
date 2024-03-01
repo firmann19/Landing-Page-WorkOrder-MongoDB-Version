@@ -12,7 +12,7 @@ function Blog() {
         <header>
           <div class="jumbotron">
             <h1 className="title-blog text-white">Work Order</h1>
-            <p className="m-0">
+            <p>
               Sistem untuk mengelola permintaan pemeliharaan dan pemrosesan
               perintah kerja
             </p>
@@ -36,137 +36,108 @@ function Blog() {
         <main className="main-blog">
           <div id="content">
             <article id="sejarah" class="card-blog">
-              <h2 className="label-blog">Sejarah</h2>
+              <h2 className="label-blog">Definisi</h2>
               <p>
-                Pada tahun 1994 Yayasan Nirwana Nusantara mendirikan Lembaga
-                Pendidikan dan Pelatihan Komputer (LPPK) Raharja yang diresmikan
-                oleh Walikota Tangerang pada waktu itu Drs.H.Djakaria Machmud.
-                Seiring berjalannya waktu lembaga pendidikan komputer ini
-                semakin berkembang karena banyaknya masyarakat yang berminat
-                mengikuti pelatihan komputer, sehingga pada tahun 2001
-                Terbentuklah Sekolah Tinggi Manajemen dan Ilmu Komputer (STMIK)
-                Raharja melalui Surat Keputusan Menteri Pendidikan Nasional
-                Nomor: 74/D/O/2001,STMIK Raharja menjadi Perguruan Tinggi
-                Komputer yang memiliki program studi terlengkap di Provinsi
-                Banten. Akreditasi pada prodi Manajemen Informatika, Teknik
-                Informatika Diploma Tiga (Akreditasi B), Akreditasi pada prodi
-                Teknik Informatika-S2, Teknik Informatika-S1, Sistem
-                Informasi-S1 (Akreditasi B), Akreditasi pada prodi Komputerisasi
-                Akuntansi Diploma Tiga (Akreditasi B). Pada akhirnya tahun 2019
-                Berdasarkan Surat Keputusan Menteri Riset, Teknologi dan
-                Pendidikan Tinggi Republik Indonesia nomor: 254/KPT/I/2019
-                tanggal 12 April 2019, Izin penggabungan Akademi Manajemen
-                Informatika dan Sekolah Tinggi Manajemen dan Ilmu Komputer
-                Raharja menjadi UNIVERSITAS RAHARJA.
+                Work Order adalah Sistem yang di dalamnya berisi perintah suatu
+                pekerjaan dalam ruang lingkup internal ataupun eksternal
+                perusahaan pada pelaksana yang memang ditugaskan. Untuk industri
+                perusahaan manufaktur, work order adalah suatu dokumen yang akan
+                mendukung penanganan inspeksi untuk pembekalan suku cadang,
+                material, dan keperluan layanan.
               </p>
             </article>
 
             <article id="visidanmisi" class="card-blog">
-              <h2 className="label-blog">Visi Dan Misi</h2>
+              <h2 className="label-blog">Tujuan</h2>
               <p>
-                Visi Universitas Raharja :<br />
-                Dengan semangat perubahan Universitas Raharja pada tahun 2024
-                siap melahirkan lulusan berkualitas, berintegritas, berdaya
-                saing tinggi dan mampu meningkatkan kepercayaan masyarakat luas
-                serta tercatat dalam kampus rangking Dunia.
+                Tujuan dibuatnya work order adalah agar bisa membantu
+                penjadwalan dan juga perencanaan dari suatu pekerjaan. Work
+                order akan berisi informasi terkait batasan pekerjaan yang
+                memang harus dilakukan dan terkait objek teknis berbentuk
+                operasi, lokasi, jadwal mulai dan selesai, serta durasi kerja.
               </p>
-              <p>Misi Universitas Raharja :</p>
-              <ol>
-                <li>
-                  Universitas Raharja (UR) akan melayani dengan hati secara
-                  profesional kepada seluruh masyarakat yang ingin bergabung
-                  berama Raharja dalam menjalankan Catur Dharma (Pembelajaran,
-                  Penelitian, Pengembangan dan Pengabdian Masyarakat).
-                </li>
-                <li>
-                  Universitas Raharja (UR) akan melaksanakan lifelong student
-                  centered learning melalui atmosfer akademik yang kondusif,
-                  berlandaskan Program Pendidikan Catur Dharma yang aktif dan
-                  produktif menuju sukses yang berkelanjutan.
-                </li>
-                <li>
-                  Universitas Raharja (UR) akan mendorong dan memfasilitasi pada
-                  peserta didik yang memiliki inovasi dan presentasi unggul
-                  menuju jenjang yang lebih tinggi.
-                </li>
-                <li>
-                  Universitas akan membuka ruang kepada masyarakat yang memiliki
-                  inovasi, gagasan dan keinginan untuk bersama-sama manajemen
-                  kampus mengembangkan penelitian.
-                </li>
-                <li>
-                  Universitas Raharja (UR) berkomitmen membantu Pemerintah dalam
-                  melahirkan Sumber Daya Manusia yang handal, bardayasaing
-                  tinggi dan berakhlak mulia.
-                </li>
-              </ol>
             </article>
 
             <article id="organisasimahasiswa" class="card-blog">
-              <h2 className="label-blog">Organisasi Mahasiswa</h2>
+              <h2 className="label-blog">Elemen</h2>
               <p>
-                Universitas Raharja mempunyai berbagai macam organisasi
-                mahasiswa yang menarik dan bermanfaat bagi rekan mahasiswa
-                Universitas Raharja. Di dalam organisasi tersebut mahasiswa
-                dapat mengembangkan dirinya supaya menjadi kreatif,inovatif, dan
-                loyalitas. Berikut ini macam-macam organisasi mahasiswa
-                universitas raharja :
+                Di dalam industri perusahaan manufaktur, work order dibuat oleh
+                mereka yang berada di bagian perencanaan produksi. Perintah
+                kerja tersebut dibuat untuk lebih dari satu produksi atau bisa
+                juga merupakan proses dari permintaan sales order atau pesanan
+                penjualan.
               </p>
               <ol>
                 <li>
-                  <a href="https://widuri.raharja.info/index.php?title=Badan_Eksekutif_Mahasiswa_(BEM)_Raharja">
-                    Badan Eksekutif Mahasiswa (BEM)
-                  </a>
+                  <h5 className="text-2xl fw-semibold">Informasi Kerja</h5>
+                  <p>
+                    Pada bagian atas atau header berisi informasi umum
+                    pekerjaan, yaitu User, Departemen, Nama Peralatan, Kode
+                    Peralatan, Tanggal Work Order, Tanggal Pengerjaan.
+                    <ol>
+                      <li>User: Nama user untuk formulir Work Order</li>
+                      <li>
+                        Departemen: Departemen user untuk formulir Work Order
+                      </li>
+                      <li>
+                        Nama Peralatan: Nama Peralatan yang ingin diperbaiki
+                        atau diganti
+                      </li>
+                      <li>
+                        Kode Peralatan: Kode Peralatan yang ingin diperbaiki
+                        atau diganti
+                      </li>
+                      <li>
+                        Tanggal Work Order: Tanggal Work Order untuk mengetahui
+                        waktu pembuatan work order oleh user
+                      </li>
+                      <li>
+                        Tanggal Pengerjaan: Tanggal Pengerjaan untuk mengetahui
+                        waktu work order dikerjakan oleh divisi IT
+                      </li>
+                    </ol>
+                  </p>
                 </li>
+
+                <br />
+
                 <li>
-                  <a href="https://widuri.raharja.info/index.php?title=Dewan_Mahasiswa_(DEMA)_Raharja">
-                    Dewan Mahasiswa (DEMA)
-                  </a>
-                </li>
-                <li>
-                  <a href="https://komasi-rhj.blogspot.com/">
-                    HMJ KOMASI (Himpunan Mahasiswa Jurusan Sistem Informasi)
-                  </a>
-                </li>
-                <li>
-                  <a href="https://himtif.org/">
-                    HMJ HIMTIF (Himpunan Mahasiswa Jurusan Teknik Informatika)
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    HMJ HIMASIKOM (Himpunan Mahasiswa Jurusan Sistem Komputer)
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    HMJ IMMI (Himpunan Mahasiswa Manajemen Informatika)
-                  </a>
-                </li>
-                <li>
-                  <a href="#">UKM Raharja FC (Raharja Football Club)</a>
-                </li>
-                <li>
-                  <a href="https://widuri.raharja.info/index.php?title=RIPALA">
-                    UKM RIPALA (Raharja Pecinta Alam)
-                  </a>
-                </li>
-                <li>
-                  <a href="https://widuri.raharja.info/index.php?title=ABSTER">
-                    UKM ABSTER (Anak Basket Komputer)
-                  </a>
-                </li>
-                <li>
-                  <a href="https://widuri.raharja.info/index.php?title=FUMMRI">
-                    UKM FUMMRI (Forum Ukhuwah Mahasiswa Muslim Raharja
-                    Informatika)
-                  </a>
-                </li>
-                <li>
-                  <a href="#">UKM MARANATA</a>
-                </li>
-                <li>
-                  <a href="#">UKM PB Raharja (Persatuan Bulutangkis Raharja)</a>
+                  <h5 className="text-2xl fw-semibold">Bagian Detail</h5>
+                  <p>
+                    Dalam bagian detail, akan terdapat beberapa poin penting,
+                    yakni Permasalahan, Tindakan, Sparepart Yang Diganti,
+                    Pemohon, Disetujui, Dikerjakan, Diketahui. Berikut ini
+                    adalah penjelasannya:
+                    <ol>
+                      <li>
+                        Permasalahan: Permasalahan yang terjadi pada peralatan
+                        user
+                      </li>
+                      <li>
+                        Tindakan: Hasil akhir dari divisi IT dalam menangani
+                        work order yang diberikan user
+                      </li>
+                      <li>
+                        Sparepart Yang Diganti: Form untuk memberikan penjelasan
+                        apabila ada sparepart yang perlu diganti
+                      </li>
+                      <li>Pemohon: user yang melakukan request work order</li>
+                      <li>
+                        Disetujui: Kepala departemen yang bertanggung jawab atas
+                        request work order yang dilakukan oleh user berdasarkan
+                        departemennya
+                      </li>
+                      <li>
+                        Dikerjakan: Staff departemen IT yang mengambil request
+                        work order yang diajukan user
+                      </li>
+                      <li>
+                        Diketahui: Manager divisi IT yang bertanggung jawab atas
+                        laporan work order yang selesai dikerjakan oleh staff
+                        departemen IT
+                      </li>
+                    </ol>
+                  </p>
                 </li>
               </ol>
             </article>
@@ -174,14 +145,15 @@ function Blog() {
           <aside>
             <article class="card-blog">
               <header className="text-center">
-                <h4 className="label">
-                  PT. Arai Rubber Seal Indonesia
-                </h4>
+                <h4 className="label">PT. Arai Rubber Seal Indonesia</h4>
                 <img class="profile-img" src={LogoARS} />
               </header>
 
               <section>
-                <p className="info text-lg m-0" style={{textAlign: "justify"}}>
+                <p
+                  className="info text-lg m-0"
+                  style={{ textAlign: "justify" }}
+                >
                   PT. ARAI RUBBER SEAL INDONESIA adalah sebuah perusahaan yang
                   bergerak di bidang manufaktur karet sintetis dan memproduksi
                   komponen otomotif seperti Oil Seal dan Valve Steam Seal,
