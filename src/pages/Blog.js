@@ -27,7 +27,7 @@ function Blog() {
                 <a href="#tujuan">Tujuan</a>
               </li>
               <li>
-                <a href="#elemenworkorder">Elemen Work Order</a>
+                <a href="#elemenworkorder">Elemen</a>
               </li>
             </ul>
           </nav>
