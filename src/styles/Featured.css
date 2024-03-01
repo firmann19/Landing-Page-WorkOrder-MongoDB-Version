@@ -8,6 +8,12 @@
     margin-right: auto;
 }
 
+.item:hover {
+    transform: translateY(-5px); /* Pergeseran elemen ke atas saat hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan saat hover */
+    border: 2px solid #00BAFF;
+}
+
 
 .title-item {
     font-family: 'Quicksand', sans-serif;

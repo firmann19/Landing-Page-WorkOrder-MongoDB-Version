@@ -117,6 +117,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCheckouts } from "../redux/checkouts/actions";
 import Table from "../components/partikel/TableWithAction";
 import { useState } from "react";
+import Footer from "../components/Footer";
 
 function HistoryWO() {
   const dispatch = useDispatch();
@@ -214,6 +215,7 @@ function HistoryWO() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

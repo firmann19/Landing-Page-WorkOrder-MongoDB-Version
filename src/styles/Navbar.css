@@ -68,7 +68,8 @@
     .navbar .nav-item {
         /* Tambahkan gaya tulisan untuk nav-item di sini */
         font-family: 'Quicksand', sans-serif;
+        font-weight: 600;
         font-size: 1.3rem;
-        font-weight: 400;
+        color: #8a8f94;
     }
 }
