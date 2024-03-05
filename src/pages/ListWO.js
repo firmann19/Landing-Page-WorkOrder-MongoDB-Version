@@ -9,9 +9,11 @@ import { deleteData } from "../utils/fetch";
 import { setNotif } from "../redux/notif/actions";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SAlert from "../components/partikel/Alert";
 
 function ListWO() {
   const dispatch = useDispatch();
+  const notif = useSelector((state) => state.notif);
   const checkouts = useSelector((state) => state.checkouts);
 
   useEffect(() => {
@@ -45,6 +47,11 @@ function ListWO() {
     <div className="list-wo">
       <Navbar />
       <Container className="mt-5" style={{ height: "75vh", overflowX: "auto" }}>
+        <div className="alert-listWO">
+          {notif.status && (
+            <SAlert type={notif.typeNotif} message={notif.message} className={"alert-listWO-Approve"} />
+          )}
+        </div>
         <Table
           thead={[
             "Nama",
@@ -52,7 +59,7 @@ function ListWO() {
             "Peralatan",
             "Kode",
             "Status",
-            "Tanngal Order",
+            "Tannggal Order",
             "Aksi",
           ]}
           data={checkouts.data}

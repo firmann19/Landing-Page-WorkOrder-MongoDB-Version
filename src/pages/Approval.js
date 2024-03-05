@@ -111,23 +111,15 @@ function Approval() {
     const res = await putData(`/checkout/${id}/statuswo/`, payload);
 
     if (res?.data?.data) {
-      const { success } = res.data.data;
-      if (success) {
-        dispatch(
-          setNotif(true, "success", `berhasil update status Work Order`)
-        );
-        navigate("/list-wo");
-        setIsLoading(false);
-      } else {
-        setIsLoading(false);
-        setAlert({
-          ...alert,
-          status: true,
-          type: "danger",
-          message: "Kode OTP salah",
-        });
-        // Anda dapat menampilkan pesan kesalahan atau mengambil tindakan lain sesuai kebutuhan
-      }
+      dispatch(
+        setNotif(
+          true,
+          "success",
+          `berhasil update status Work Order`
+        )
+      );
+      navigate("/list-wo");
+      setIsLoading(false);
     } else {
       setIsLoading(false);
       setAlert({
@@ -136,7 +128,6 @@ function Approval() {
         type: "danger",
         message: res.response.data.msg,
       });
-      // Anda dapat menampilkan pesan kesalahan atau mengambil tindakan lain sesuai kebutuhan
     }
   };
 
@@ -214,7 +205,7 @@ function Approval() {
             id="approveForm"
             style={{ display: "block" /* your styling for contact form */ }}
           >
-            <div className="m-auto" style={{width: "100%"}}>
+            <div className="m-auto" style={{ width: "100%" }}>
               {alert.status && (
                 <SAlert type={alert.type} message={alert.message} />
               )}
