@@ -10,6 +10,7 @@ import { setNotif } from "../redux/notif/actions";
 import { useDispatch } from "react-redux";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SAlert from "../components/partikel/Alert";
 
 function Approval() {
   const navigate = useNavigate();
@@ -28,6 +29,11 @@ function Approval() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isContactFormVisible, setContactFormVisible] = useState(false);
+  const [alert, setAlert] = useState({
+    status: false,
+    type: "",
+    message: "",
+  });
 
   useEffect(() => {
     // Fungsi untuk menangani klik di luar elemen formulir kontak
@@ -89,17 +95,48 @@ function Approval() {
   };
 
   const handleSubmit = async () => {
+    if (!form.otp) {
+      setAlert({
+        ...alert,
+        status: true,
+        type: "danger",
+        message: "OTP belum di input",
+      });
+      setIsLoading(false);
+      return;
+    }
+
     setIsLoading(true);
     const payload = { ...form, otp: form.otp };
     const res = await putData(`/checkout/${id}/statuswo/`, payload);
 
     if (res?.data?.data) {
-      dispatch(setNotif(true, "success", `berhasil update status Work Order`));
-      navigate("/list-wo");
-      setIsLoading(false);
+      const { success } = res.data.data;
+      if (success) {
+        dispatch(
+          setNotif(true, "success", `berhasil update status Work Order`)
+        );
+        navigate("/list-wo");
+        setIsLoading(false);
+      } else {
+        setIsLoading(false);
+        setAlert({
+          ...alert,
+          status: true,
+          type: "danger",
+          message: "Kode OTP salah",
+        });
+        // Anda dapat menampilkan pesan kesalahan atau mengambil tindakan lain sesuai kebutuhan
+      }
     } else {
       setIsLoading(false);
-      console.error(res.response.data.msg);
+      setAlert({
+        ...alert,
+        status: true,
+        type: "danger",
+        message: res.response.data.msg,
+      });
+      // Anda dapat menampilkan pesan kesalahan atau mengambil tindakan lain sesuai kebutuhan
     }
   };
 
@@ -177,6 +214,11 @@ function Approval() {
             id="approveForm"
             style={{ display: "block" /* your styling for contact form */ }}
           >
+            <div className="m-auto" style={{width: "100%"}}>
+              {alert.status && (
+                <SAlert type={alert.type} message={alert.message} />
+              )}
+            </div>
             <ApproveInput
               form={form}
               isLoading={isLoading}
