@@ -108,7 +108,7 @@ function CreateWO() {
             borderRadius: "10px", // Sudut bulatan pada kartu
           }}
         >
-          <h1 className="title text-center mt-3">Work Order</h1>
+          <h1 className="title text-center mt-4">Work Order</h1>
           <div className="border-top border-gray-200 pt-4 mt-4">
           <CreateWoInput
             user={user}

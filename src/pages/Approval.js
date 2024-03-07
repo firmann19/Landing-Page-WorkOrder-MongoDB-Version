@@ -151,7 +151,7 @@ function Approval() {
             borderRadius: "10px 10px 0 0", // Sudut bulatan pada kartu
           }}
         >
-          <h2 className="title text-center mt-3">Work Order</h2>
+          <h2 className="title text-center mt-4">Work Order</h2>
           <div className="border-top border-gray-200 pt-4 mt-4">
             <DetailApproval form={form} />
           </div>
