@@ -9,6 +9,7 @@ function SelectBox({
   placeholder,
   handleChange,
   label,
+  className
 }) {
   const customStyles = {
     control: (provided, state) => ({
@@ -25,7 +26,7 @@ function SelectBox({
 
   return (
     <Form.Group>
-      {label && <Form.Label>{label}</Form.Label>}
+      {label && <Form.Label className="label">{label}</Form.Label>}
       <Select
         name={name}
         placeholder={placeholder}
@@ -33,6 +34,7 @@ function SelectBox({
         onChange={handleChange}
         value={value}
         styles={customStyles}
+        className={className}
       />
     </Form.Group>
   );

@@ -75,10 +75,11 @@ function CreateWoInput({
       </Form.Group>
 
       <div className="mt-4 selectBox">
-        <div className="relative label">
+        <div className="relative">
           <SelectBox
             label={"Disetujui"}
             placeholder={"Pilih nama atasan"}
+            className="text-md"
             name="UserApprove"
             isClearable={true}
             value={form.UserApprove}

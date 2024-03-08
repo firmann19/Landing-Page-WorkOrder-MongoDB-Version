@@ -4,9 +4,9 @@ import { Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchListCheckouts } from "../redux/checkouts/actions";
-import Swal from "sweetalert2";
-import { deleteData } from "../utils/fetch";
-import { setNotif } from "../redux/notif/actions";
+// import Swal from "sweetalert2";
+// import { deleteData } from "../utils/fetch";
+// import { setNotif } from "../redux/notif/actions";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SAlert from "../components/partikel/Alert";
@@ -20,28 +20,28 @@ function ListWO() {
     dispatch(fetchListCheckouts());
   }, [dispatch]);
 
-  const handleDelete = (id) => {
-    Swal.fire({
-      title: "Apa kamu yakin?",
-      text: "Anda tidak akan dapat mengembalikan ini!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Iya, Hapus",
-      cancelButtonText: "Batal",
-    }).then(async (result) => {
-      if (result.isConfirmed) {
-        if (result.isConfirmed) {
-          const res = await deleteData(`/checkout/${id}`);
-          if (res?.data?.data) {
-            dispatch(setNotif(true, "success", `berhasil hapus Work Order`));
-            dispatch(fetchListCheckouts());
-          }
-        }
-      }
-    });
-  };
+  // const handleDelete = (id) => {
+  //   Swal.fire({
+  //     title: "Apa kamu yakin?",
+  //     text: "Anda tidak akan dapat mengembalikan ini!",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Iya, Hapus",
+  //     cancelButtonText: "Batal",
+  //   }).then(async (result) => {
+  //     if (result.isConfirmed) {
+  //       if (result.isConfirmed) {
+  //         const res = await deleteData(`/checkout/${id}`);
+  //         if (res?.data?.data) {
+  //           dispatch(setNotif(true, "success", `berhasil hapus Work Order`));
+  //           dispatch(fetchListCheckouts());
+  //         }
+  //       }
+  //     }
+  //   });
+  // };
 
   return (
     <div className="list-wo">
@@ -71,7 +71,7 @@ function ListWO() {
             "Status",
             "DateRequestWO",
           ]}
-          deleteAction={(id) => handleDelete(id)}
+          // deleteAction={(id) => handleDelete(id)}
           editUrl={`/list-wo/approval`}
         />
       </Container>
