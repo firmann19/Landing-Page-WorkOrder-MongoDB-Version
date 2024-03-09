@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
@@ -16,6 +16,16 @@ function TbodyWithAction({
   status,
 }) {
   const navigate = useNavigate();
+
+  const [userId, setUserId] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { userId } = JSON.parse(localStorage.getItem("auth")) || {};
+      setUserId(userId);
+    };
+    fetchData();
+  }, []);
   return (
     <tbody>
       {status === "process" ? (
@@ -85,6 +95,7 @@ function TbodyWithAction({
                       className={"mx-2"}
                       variant="danger"
                       size={"sm"}
+                      disabled={data.UserRequest._id === userId}
                       action={() => deleteAction(data._id)}
                     >
                       Hapus

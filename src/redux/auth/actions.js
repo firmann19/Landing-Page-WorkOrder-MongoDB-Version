@@ -17,7 +17,7 @@ export function userLogin(
     departementId,
     userId,
     role,
-    image,
+    image
   };
 }
 

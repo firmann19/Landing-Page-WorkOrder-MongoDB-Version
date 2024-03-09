@@ -94,7 +94,7 @@ export const fetchListCheckouts = () => {
         dispatch(clearNotif());
       }, 3000);
 
-      let res = await debouncedFetchListCheckouts("/checkout");
+      let res = await debouncedFetchListCheckouts("/checkoutbydepartementuser");
 
       res.data.data.forEach((res) => {
         res.UserRequestName = res.UserRequest.nama;

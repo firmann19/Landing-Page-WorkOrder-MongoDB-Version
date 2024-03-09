@@ -27,7 +27,7 @@ function Blog() {
                 <a href="#tujuan">Tujuan</a>
               </li>
               <li>
-                <a href="#elemenworkorder">Elemen</a>
+                <a href="#elemen">Elemen</a>
               </li>
             </ul>
           </nav>
@@ -35,7 +35,7 @@ function Blog() {
 
         <main className="main-blog">
           <div id="content">
-            <article id="sejarah" class="card-blog">
+            <article id="definisi" class="card-blog">
               <h2 className="label-blog">Definisi</h2>
               <p>
                 Work Order adalah Sistem yang di dalamnya berisi perintah suatu
@@ -47,7 +47,7 @@ function Blog() {
               </p>
             </article>
 
-            <article id="visidanmisi" class="card-blog">
+            <article id="tujuan" class="card-blog">
               <h2 className="label-blog">Tujuan</h2>
               <p>
                 Tujuan dibuatnya work order adalah agar bisa membantu
@@ -58,7 +58,7 @@ function Blog() {
               </p>
             </article>
 
-            <article id="organisasimahasiswa" class="card-blog">
+            <article id="elemen" class="card-blog">
               <h2 className="label-blog">Elemen</h2>
               <p>
                 Di dalam industri perusahaan manufaktur, work order dibuat oleh
