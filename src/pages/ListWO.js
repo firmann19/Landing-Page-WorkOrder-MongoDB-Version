@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchListCheckouts } from "../redux/checkouts/actions";
 import Swal from "sweetalert2";
-import { deleteData } from "../utils/fetch";
+import { deleteData, putData } from "../utils/fetch";
+import Button from "../components/partikel/Button";
 import { setNotif } from "../redux/notif/actions";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -43,13 +44,41 @@ function ListWO() {
     });
   };
 
+  const handleChangeStatus = (id, status) => {
+    Swal.fire({
+      title: "Apa kamu yakin?",
+      text: "",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Iya, Ubah Status",
+      cancelButtonText: "Batal",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        const payload = {
+          StatusWO: status === "Ditolak" ? "Belum Approve" : "Ditolak",
+        };
+        const res = await putData(`/checkout/${id}/statusrejected`, payload);
+        if (res?.data?.data) {
+          dispatch(setNotif(true, "success", `berhasil ubah status WorkOrder`));
+          dispatch(fetchListCheckouts());
+        }
+      }
+    });
+  };
+
   return (
     <div className="list-wo">
       <Navbar />
       <Container className="mt-5" style={{ height: "75vh", overflowX: "auto" }}>
         <div className="alert-listWO">
           {notif.status && (
-            <SAlert type={notif.typeNotif} message={notif.message} className={"alert-listWO-Approve"} />
+            <SAlert
+              type={notif.typeNotif}
+              message={notif.message}
+              className={"alert-listWO-Approve"}
+            />
           )}
         </div>
         <Table
@@ -71,8 +100,21 @@ function ListWO() {
             "Status",
             "DateRequestWO",
           ]}
-          deleteAction={(id) => handleDelete(id)}
           editUrl={`/list-wo/approval`}
+          // customAction={(id, statusWO = "") => {
+          //   return (
+          //     <Button
+          //       className={"mx-2"}
+          //       variant="danger"
+          //       size={"sm"}
+          //       action={() => handleChangeStatus(id, statusWO)}
+          //     >
+          //       Change Status
+          //     </Button>
+          //   );
+          // }}
+          customAction={(id, statusWO = "") => handleChangeStatus(id, statusWO)}
+          deleteAction={(id) => handleDelete(id)}
         />
       </Container>
       <Footer />

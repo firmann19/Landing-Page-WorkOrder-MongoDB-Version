@@ -3,11 +3,14 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/images/logoHTA.png";
 import { NavLink } from "react-router-dom";
+import { BellIcon } from "@chakra-ui/icons";
+// import io from 'socket.io-client';
 
 function Navbar() {
   const [user, setUser] = useState(null);
   const [role, setRole] = useState(null);
   const [image, setImage] = useState(null);
+  const [notification, setNotification] = useState([]);
 
   const handleLogout = () => {
     localStorage.clear();
@@ -26,6 +29,9 @@ function Navbar() {
     };
     fetchData();
   }, []);
+
+  // const socket = io('http://localhost:5000');
+  
 
   return (
     <section>
@@ -81,6 +87,10 @@ function Navbar() {
               </NavLink>
             </ul>
             <ul className="navbar-nav text-lg">
+            <BellIcon className="my-auto me-3" boxSize={["20px", "30px"]} />
+            {notification && (
+              <span className="badge bg-danger rounded-pill">{notification}</span>
+            )}
             <div className="vertical-line d-lg-block d-none"></div>
               <li className="nav-item my-auto dropdown d-flex">
                 <p className="text-lg nav-item text-black color-palette-1 ms-3 my-auto">

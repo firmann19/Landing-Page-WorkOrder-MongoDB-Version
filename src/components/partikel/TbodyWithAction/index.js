@@ -52,7 +52,20 @@ function TbodyWithAction({
               )}
               {!actionNotDisplay && (
                 <td>
-                  {customAction && customAction(data._id, data.StatusWO)}
+                  {customAction && (
+                    <Button
+                      className={"mx-2"}
+                      variant="primary"
+                      size={"sm"}
+                      disabled={
+                        data.UserRequest._id === userId ||
+                        data.StatusWO === "Ditolak"
+                      }
+                      action={() => customAction(data._id, data.StatusWO)}
+                    >
+                      Change Status
+                    </Button>
+                  )}
                   {editUrl && (
                     <Button
                       variant="success"
