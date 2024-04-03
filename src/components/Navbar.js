@@ -3,14 +3,14 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/images/logoHTA.png";
 import { NavLink } from "react-router-dom";
-import { BellIcon } from "@chakra-ui/icons";
-// import io from 'socket.io-client';
+import NotificationsIcon from "@mui/icons-material/Notifications";
+// import io from "socket.io-client";
 
-function Navbar() {
+function Navbar({ socket }) {
   const [user, setUser] = useState(null);
   const [role, setRole] = useState(null);
   const [image, setImage] = useState(null);
-  const [notification, setNotification] = useState([]);
+  // const [notifications, setNotifications] = useState([]);
 
   const handleLogout = () => {
     localStorage.clear();
@@ -30,8 +30,21 @@ function Navbar() {
     fetchData();
   }, []);
 
-  // const socket = io('http://localhost:5000');
-  
+  // useEffect(() => {
+  //   // Menghubungkan ke server WebSocket
+  //   const socket = io('http://localhost:3000');
+  //   console.log("Test", socket)
+
+  //   // Mendengarkan event 'notification' dari server dan memperbarui state notifikasi
+  //   socket.on('notification', (notification) => {
+  //     setNotifications([...notifications, notification]);
+  //   });
+
+  //   // Membersihkan event listener saat komponen unmount
+  //   return () => {
+  //     socket.disconnect();
+  //   };
+  // }, [notifications]);
 
   return (
     <section>
@@ -87,11 +100,35 @@ function Navbar() {
               </NavLink>
             </ul>
             <ul className="navbar-nav text-lg">
-            <BellIcon className="my-auto me-3" boxSize={["20px", "30px"]} />
-            {notification && (
-              <span className="badge bg-danger rounded-pill">{notification}</span>
-            )}
-            <div className="vertical-line d-lg-block d-none"></div>
+              <div class="notification dropdown">
+                <button
+                  class="icon btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{ border: "none" }}
+                >
+                  <NotificationsIcon
+                    className="me-3"
+                    boxSize={["30px", "40px"]}
+                  />
+                  {/* {notifications.length > 0 && (
+                    <span className="badge bg-danger">
+                      {notifications.length}
+                    </span>
+                  )} */}
+                </button>
+                <ul class="dropdown-menu">
+                  {/* {notifications.map((notification, index) => (
+                    <li key={index}>
+                      <a className="dropdown-item" href="#">
+                        {notification}
+                      </a>
+                    </li>
+                  ))} */}
+                </ul>
+              </div>
+              <div className="vertical-line d-lg-block d-none"></div>
               <li className="nav-item my-auto dropdown d-flex">
                 <p className="text-lg nav-item text-black color-palette-1 ms-3 my-auto">
                   {role}, {user}

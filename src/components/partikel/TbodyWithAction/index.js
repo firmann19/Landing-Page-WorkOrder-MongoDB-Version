@@ -59,7 +59,8 @@ function TbodyWithAction({
                       size={"sm"}
                       disabled={
                         data.UserRequest._id === userId ||
-                        data.StatusWO === "Ditolak"
+                        data.StatusWO === "Ditolak" ||
+                        data.StatusWO === "Approve"
                       }
                       action={() => customAction(data._id, data.StatusWO)}
                     >

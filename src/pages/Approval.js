@@ -27,6 +27,7 @@ function Approval() {
     StatusWO: "",
     otp: "",
   });
+  const [isApproveDisabled, setIsApproveDisabled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isContactFormVisible, setContactFormVisible] = useState(false);
   const [alert, setAlert] = useState({
@@ -71,6 +72,13 @@ function Approval() {
           ),
           StatusWO,
         });
+
+        // Menentukan apakah tombol "Approve" harus dinonaktifkan berdasarkan StatusWO
+        if (StatusWO === "Approve") {
+          setIsApproveDisabled(true);
+        } else {
+          setIsApproveDisabled(false);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -86,9 +94,7 @@ function Approval() {
     return () => {
       document.removeEventListener("mouseup", handleClickOutside);
     };
-
-    // Tidak ada dependensi yang diubah, sehingga array dependensi kosong
-  }, []); // Menambahkan array dependensi kosong karena ini akan dijalankan sekali saat komponen dimount
+  }, [id]); // Menambahkan id ke dalam dependensi karena id digunakan dalam pengambilan data
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -111,13 +117,7 @@ function Approval() {
     const res = await putData(`/checkout/${id}/statuswo/`, payload);
 
     if (res?.data?.data) {
-      dispatch(
-        setNotif(
-          true,
-          "success",
-          `berhasil update status Work Order`
-        )
-      );
+      dispatch(setNotif(true, "success", `berhasil update status Work Order`));
       navigate("/list-wo");
       setIsLoading(false);
     } else {
@@ -161,6 +161,7 @@ function Approval() {
           href="#!"
           className="btn btn-dark btn-lg card-footer-btn text-uppercase-bold-sm hover-lift-light w-100 d-flex justify-content-center"
           onClick={handleContactClick}
+          disabled={isApproveDisabled}
         >
           <span className="svg-icon text-white me-2">
             <svg

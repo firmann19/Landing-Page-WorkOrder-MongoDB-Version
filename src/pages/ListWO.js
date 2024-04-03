@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { fetchListCheckouts } from "../redux/checkouts/actions";
 import Swal from "sweetalert2";
 import { deleteData, putData } from "../utils/fetch";
-import Button from "../components/partikel/Button";
 import { setNotif } from "../redux/notif/actions";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -88,7 +87,7 @@ function ListWO() {
             "Peralatan",
             "Kode",
             "Status",
-            "Tannggal Order",
+            "Tanggal Order",
             "Aksi",
           ]}
           data={checkouts.data}
@@ -101,18 +100,6 @@ function ListWO() {
             "DateRequestWO",
           ]}
           editUrl={`/list-wo/approval`}
-          // customAction={(id, statusWO = "") => {
-          //   return (
-          //     <Button
-          //       className={"mx-2"}
-          //       variant="danger"
-          //       size={"sm"}
-          //       action={() => handleChangeStatus(id, statusWO)}
-          //     >
-          //       Change Status
-          //     </Button>
-          //   );
-          // }}
           customAction={(id, statusWO = "") => handleChangeStatus(id, statusWO)}
           deleteAction={(id) => handleDelete(id)}
         />
