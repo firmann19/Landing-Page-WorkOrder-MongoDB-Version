@@ -25,6 +25,7 @@ function HistoryWoDetail() {
     HeadIT: "",
     StaffIT: "",
     Date_CompletionWO: "",
+    selectedAction: ""
   });
 
   const fetchOneWO = async () => {
@@ -49,6 +50,7 @@ function HistoryWoDetail() {
       Date_CompletionWO: moment(res.data.data.Date_CompletionWO).format(
         "DD-MM-YYYY, h:mm:ss a"
       ),
+      selectedAction: res.data.data.selectedAction
     });
   };
 
