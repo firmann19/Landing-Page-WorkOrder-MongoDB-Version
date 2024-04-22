@@ -1,5 +1,5 @@
 import React from "react";
-import LogoARS from "../assets/images/logo_ars-removebg-preview.png";
+import LogoHTA from "../assets/images/logo_hta.png";
 import { Table } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -146,7 +146,7 @@ function Blog() {
             <article class="card-blog">
               <header className="text-center">
                 <h4 className="label">PT. Arai Rubber Seal Indonesia</h4>
-                <img class="profile-img" src={LogoARS} />
+                <img class="profile-img" src={LogoHTA} />
               </header>
 
               <section>
@@ -154,12 +154,12 @@ function Blog() {
                   className="info text-lg m-0"
                   style={{ textAlign: "justify" }}
                 >
-                  PT. ARAI RUBBER SEAL INDONESIA adalah sebuah perusahaan yang
-                  bergerak di bidang manufaktur karet sintetis dan memproduksi
-                  komponen otomotif seperti Oil Seal dan Valve Steam Seal,
-                  O-Ring dan Rubber Part 12. Perusahaan ini terletak di Kawasan
-                  Industri Manis, Jl. Manis II No. 2, Kabupaten Tangerang,
-                  Banten, 15810 Indonesia.
+                  PT. HTA INDONESIA adalah sebuah perusahaan yang bergerak di
+                  bidang manufaktur karet sintetis dan memproduksi komponen
+                  otomotif seperti Oil Seal dan Valve Steam Seal, O-Ring dan
+                  Rubber Part 12. Perusahaan ini terletak di Jl. Millennium Raya
+                  Blok H-2 No.2 Kawasan Industri Millennium 15710 Kabupaten
+                  Tangerang, Banten.
                 </p>
               </section>
             </article>

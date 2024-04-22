@@ -4,13 +4,14 @@ import React, { useEffect, useState } from "react";
 import Logo from "../assets/images/logoHTA.png";
 import { NavLink } from "react-router-dom";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-// import io from "socket.io-client";
+import io from "socket.io-client";
 
-function Navbar({ socket }) {
+function Navbar() {
   const [user, setUser] = useState(null);
   const [role, setRole] = useState(null);
   const [image, setImage] = useState(null);
-  // const [notifications, setNotifications] = useState([]);
+  const [notifications, setNotifications] = useState([]);
+  const [socket, setSocket] = useState(null);
 
   const handleLogout = () => {
     localStorage.clear();
@@ -28,23 +29,25 @@ function Navbar({ socket }) {
       setImage(image);
     };
     fetchData();
+
+    // Inisialisasi soket.io client
+    const socket = io("http://localhost:5000");
+    setSocket(socket);
+
+    return () => {
+      socket.disconnect();
+    };
   }, []);
 
-  // useEffect(() => {
-  //   // Menghubungkan ke server WebSocket
-  //   const socket = io('http://localhost:3000');
-  //   console.log("Test", socket)
-
-  //   // Mendengarkan event 'notification' dari server dan memperbarui state notifikasi
-  //   socket.on('notification', (notification) => {
-  //     setNotifications([...notifications, notification]);
-  //   });
-
-  //   // Membersihkan event listener saat komponen unmount
-  //   return () => {
-  //     socket.disconnect();
-  //   };
-  // }, [notifications]);
+  useEffect(() => {
+    if (socket) {
+      // Menerima notifikasi dari server
+      socket.on("workOrderStatusChanged", (data) => {
+        console.log("Received notification:", data);
+        setNotifications((prevNotifications) => [...prevNotifications, data]);
+      });
+    }
+  }, [socket]);
 
   return (
     <section>
@@ -112,20 +115,20 @@ function Navbar({ socket }) {
                     className="me-3"
                     boxSize={["30px", "40px"]}
                   />
-                  {/* {notifications.length > 0 && (
+                  {notifications.length > 0 && (
                     <span className="badge bg-danger">
                       {notifications.length}
                     </span>
-                  )} */}
+                  )}
                 </button>
                 <ul class="dropdown-menu">
-                  {/* {notifications.map((notification, index) => (
+                  {notifications.map((workOrder, index) => (
                     <li key={index}>
                       <a className="dropdown-item" href="#">
-                        {notification}
+                        {workOrder.message}
                       </a>
                     </li>
-                  ))} */}
+                  ))}
                 </ul>
               </div>
               <div className="vertical-line d-lg-block d-none"></div>
