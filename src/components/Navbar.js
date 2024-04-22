@@ -3,15 +3,15 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/images/logoHTA.png";
 import { NavLink } from "react-router-dom";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import io from "socket.io-client";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
+// import io from "socket.io-client";
 
 function Navbar() {
   const [user, setUser] = useState(null);
   const [role, setRole] = useState(null);
   const [image, setImage] = useState(null);
-  const [notifications, setNotifications] = useState([]);
-  const [socket, setSocket] = useState(null);
+  // const [notifications, setNotifications] = useState([]);
+  // const [socket, setSocket] = useState(null);
 
   const handleLogout = () => {
     localStorage.clear();
@@ -31,23 +31,23 @@ function Navbar() {
     fetchData();
 
     // Inisialisasi soket.io client
-    const socket = io("http://localhost:5000");
-    setSocket(socket);
+    // const socket = io("http://localhost:5000");
+    // setSocket(socket);
 
-    return () => {
-      socket.disconnect();
-    };
+    // return () => {
+    //   socket.disconnect();
+    // };
   }, []);
 
-  useEffect(() => {
-    if (socket) {
-      // Menerima notifikasi dari server
-      socket.on("workOrderStatusChanged", (data) => {
-        console.log("Received notification:", data);
-        setNotifications((prevNotifications) => [...prevNotifications, data]);
-      });
-    }
-  }, [socket]);
+  // useEffect(() => {
+  //   if (socket) {
+  //     // Menerima notifikasi dari server
+  //     socket.on("workOrderStatusChanged", (data) => {
+  //       console.log("Received notification:", data);
+  //       setNotifications((prevNotifications) => [...prevNotifications, data]);
+  //     });
+  //   }
+  // }, [socket]);
 
   return (
     <section>
@@ -103,7 +103,7 @@ function Navbar() {
               </NavLink>
             </ul>
             <ul className="navbar-nav text-lg">
-              <div class="notification dropdown">
+              {/* <div class="notification dropdown">
                 <button
                   class="icon btn dropdown-toggle"
                   type="button"
@@ -130,7 +130,7 @@ function Navbar() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
               <div className="vertical-line d-lg-block d-none"></div>
               <li className="nav-item my-auto dropdown d-flex">
                 <p className="text-lg nav-item text-black color-palette-1 ms-3 my-auto">

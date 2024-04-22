@@ -1,6 +1,5 @@
 import React from "react";
 import LogoHTA from "../assets/images/logo_hta.png";
-import { Table } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
