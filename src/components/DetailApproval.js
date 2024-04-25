@@ -87,19 +87,6 @@ function DetailApproval({ form }) {
           />
         </Col>
       </Row>
-
-      <Row className="mb-4 text-lg fw-medium">
-        <Col xs={12} md={6}>
-          <TextInputWithLabel
-            label={"Status"}
-            name="StatusWO"
-            isClearable={true}
-            value={form?.StatusWO}
-            readOnly
-            disabled
-          />
-        </Col>
-      </Row>
     </Form>
   );
 }

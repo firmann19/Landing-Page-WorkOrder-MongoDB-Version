@@ -55,7 +55,7 @@ function TbodyWithAction({
                   {customAction && (
                     <Button
                       className={"mx-2"}
-                      variant="primary"
+                      variant="warning"
                       size={"sm"}
                       disabled={
                         data.UserRequest._id === userId ||
@@ -64,7 +64,7 @@ function TbodyWithAction({
                       }
                       action={() => customAction(data._id, data.StatusWO)}
                     >
-                      Change Status
+                      Ditolak
                     </Button>
                   )}
                   {editUrl && (

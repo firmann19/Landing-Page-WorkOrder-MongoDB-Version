@@ -24,7 +24,6 @@ function Approval() {
     Permasalahan: "",
     UserApprove: "",
     Date_RequestWO: "",
-    StatusWO: "",
     otp: "",
   });
   const [isApproveDisabled, setIsApproveDisabled] = useState(false);
@@ -70,7 +69,6 @@ function Approval() {
           Date_RequestWO: moment(Date_RequestWO).format(
             "DD-MM-YYYY, h:mm:ss a"
           ),
-          StatusWO,
         });
 
         // Menentukan apakah tombol "Approve" harus dinonaktifkan berdasarkan StatusWO
