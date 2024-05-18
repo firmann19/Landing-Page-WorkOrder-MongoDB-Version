@@ -105,7 +105,7 @@ function CreateWO() {
           className="m-auto"
           style={{
             boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)", // Bayangan pada setiap sisi
-            borderRadius: "10px", // Sudut bulatan pada kartu
+            borderRadius: "10px",
           }}
         >
           <h1 className="title text-center mt-4">Work Order</h1>
