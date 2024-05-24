@@ -91,14 +91,14 @@ function TbodyWithAction({
                       action={() => {
                         if (
                           data.StatusPengerjaan !== "Pending" &&
-                          data.StatusPengerjaan !== "OnProgress"
+                          data.StatusPengerjaan !== "On Progress"
                         ) {
                           navigate(`${Detail}/${data._id}`);
                         }
                       }}
                       disabled={
                         data.StatusPengerjaan === "Pending" ||
-                        data.StatusPengerjaan === "OnProgress"
+                        data.StatusPengerjaan === "On Progress"
                       }
                     >
                       Detail
