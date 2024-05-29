@@ -99,7 +99,7 @@ function HistoryWoDetail() {
           <Card
             id="pdf-content"
             style={{
-              boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)", // Bayangan pada setiap sisi
+              boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)",
             }}
           >
             <Card.Body
