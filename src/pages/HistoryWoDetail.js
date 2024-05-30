@@ -25,7 +25,7 @@ function HistoryWoDetail() {
     HeadIT: "",
     StaffIT: "",
     Date_CompletionWO: "",
-    selectedAction: ""
+    selectedAction: "",
   });
 
   const fetchOneWO = async () => {
@@ -50,7 +50,7 @@ function HistoryWoDetail() {
       Date_CompletionWO: moment(res.data.data.Date_CompletionWO).format(
         "DD-MM-YYYY, h:mm:ss a"
       ),
-      selectedAction: res.data.data.selectedAction
+      selectedAction: res.data.data.selectedAction,
     });
   };
 
@@ -68,6 +68,29 @@ function HistoryWoDetail() {
       const height = pdf.internal.pageSize.getHeight();
       pdf.addImage(imgData, "PNG", 10, 10, width - 20, height - 20); // Add margin on each side
       pdf.save("history_wo.pdf");
+    });
+  };
+
+  const printDocument = () => {
+    const input = document.getElementById("pdf-content");
+
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const printWindow = window.open("", "_blank");
+      printWindow.document.open();
+      printWindow.document.write(
+        "<html><head><title>Work Order</title></head><body>"
+      );
+      printWindow.document.write(
+        `<img id="print-img" src="${imgData}" style="width: 100%; height: auto;" />`
+      );
+      printWindow.document.write("</body></html>");
+      printWindow.document.close();
+      printWindow.document.getElementById("print-img").onload = () => {
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+      };
     });
   };
 
@@ -90,9 +113,9 @@ function HistoryWoDetail() {
               </button>
             </div>
             <div className="p-2">
-              <a href="#" className="btn btn-secondary">
+              <button onClick={printDocument} className="btn btn-secondary">
                 <i className="icon-printer"></i> Print
-              </a>
+              </button>
             </div>
           </div>
 
