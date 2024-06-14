@@ -66,7 +66,7 @@ function HistoryWoDetail() {
       const pdf = new jsPDF("p", "mm", "a4");
       const width = pdf.internal.pageSize.getWidth();
       const height = pdf.internal.pageSize.getHeight();
-      pdf.addImage(imgData, "PNG", 10, 10, width - 20, height - 20); // Add margin on each side
+      pdf.addImage(imgData, "PNG", 10, 10, width - 20, height - 20);
       pdf.save("history_wo.pdf");
     });
   };
